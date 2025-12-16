@@ -4,16 +4,12 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-do.devicecheck=0
+do.devicecheck=1
 do.modules=0
 do.systemless=1
 do.cleanup=1
 do.cleanuponabort=0
-device.name1=alioth
-device.name2=aliothin
-device.name3=apollo
-device.name4=apolloin
-device.name5=lmi
+device.name1=umi
 supported.versions=
 supported.patchlevels=
 '; } # end properties
@@ -32,9 +28,7 @@ no_block_display=1
 ## Select the correct image to flash
 userflavor="$(file_getprop /system/build.prop "ro.build.flavor")";
 case "$userflavor" in
-    aospa_alioth-user) os="aospa"; os_string="Paranoid Android ROM";;
-    aospa_apollo-user) os="aospa"; os_string="Paranoid Android ROM";;
-    aospa_lmi-user) os="aospa"; os_string="Paranoid Android ROM";;
+    aospa_umi-user) os="aospa"; os_string="Paranoid Android ROM";;
     missi-user) os="miui"; os_string="MIUI ROM";;
     missi_phoneext4_cn-user) os="miui"; os_string="MIUI ROM";;
     missi_phone_cn-user) os="miui"; os_string="MIUI ROM";;
